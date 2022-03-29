@@ -3,13 +3,14 @@ Google Collab Pro+ was used for this project.
 
 To run this code, you will need to gain access to the Google drive containing all the data and the following notebooks.
 
-In order to properly understand and run this project, it has been divided into multiple notebooks:
-- Participants' dictionary
-- Preprocessing
-- CNN models
-  - Method 1 (Reframe to 576, all sensors configuration)
-  - Method 2 (Reframe to 576, biomechanics sensor configuration)
-  - Method 3 (Resampling, biomechanics sensor configuration)
+In order to properly understand this project, open the following notebooks to follow along with the content of this ReadMe. 
+
+This project has been divided into multiple notebooks:
+- Participants_dictionary.ipynb
+- Preprocessing.ipynb
+- CNN_Method1.ipynb (Reframe to 576, all sensors configuration)
+- CNN_Method2.ipynb (Reframe to 576, biomechanics sensor configuration)
+- CNN_Method3.ipynb (Resampling, biomechanics sensor configuration)
 
 ## 1 - Participants' dictionary
 This notebook is very simple and is not optimized by any means. It has been created before I had better knowledge of python and I did not spent more time on it since it takes approximately 5 hours to open all the excel sheets. (Will be updated in the future)
