@@ -1,7 +1,7 @@
 # Hockey Shot Classification
 Google Collab Pro+ was used for this project.
 
-To run this code, you will need access to the Google drive containing all the data and the following notebooks.
+To run this code, you will need to gain access to the Google drive containing all the data and the following notebooks.
 
 In order to properly understand and run this project, it has been divided into multiple notebooks:
 - Participants' dictionary
