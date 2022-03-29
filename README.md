@@ -58,11 +58,11 @@ This notebook is dedicated to all the preprocessing steps required before feedin
   - The rest of this method is not optimized as there is a lot of manipulation done by hand, but it was created early in my process of learning python. It is fairly simple as I'm doing the final manipulations (split, shuffling, swap axes) on the tensors to have the required shape.
   - Lastly, it was saved as a pickle file for future CNN input
 
-- Method 2: reframe to 576 and biomechanics sensor configuration
-  - This approach is the same as the first one with only one exception, it used the biomechanics sensor configuration. This approach was only selecting the sensors from both hands, both feet and the pelvis, as suggested in the literature (Jang et al., 2018). 
+- Method 2: reframe to 576 and biomechanics sensor configuration (BSC)
+  - This approach is the same as the first one with only one exception, it used the BSC. This approach was only selecting the sensors from both hands, both feet and the pelvis, as suggested in the literature (Jang et al., 2018). 
  
-- Method 3: resampling and biomechanics sensor configuration
-  - This method was recently designed, therefore, it still needs some optimization. The idea is to resample the trials using a signal resampling function instead of adding frames at the beginning of the trials. This means that only the data from the shot is part of the trials, instead of having some undesired signal with the shot (method 1 & 2). Also, an estimate was made to obtain the resampling number of 400 frames, so a deeper analysis is required to find the ideal resampling rate. It also uses the biomechanics sensor configuration. 
+- Method 3: resampling and BSC
+  - This method was recently designed, therefore, it still needs some optimization. The idea is to resample the trials using a signal resampling function instead of adding frames at the beginning of the trials. This means that only the data from the shot is part of the trials, instead of having some undesired signal with the shot (method 1 & 2). Also, an estimate was made to obtain the resampling number of 400 frames, so a deeper analysis is required to find the ideal resampling rate. It also uses the BSC. 
 
 ## 3 - CNN Method 1
 I'm just staring to test different models' architechture. The first CNN was to compare the result with the other 2 preprocessing method. The goal is to keep on building with Chollet's method.
