@@ -64,7 +64,8 @@ This notebook is dedicated to all the preprocessing steps required before feedin
   - This method was recently designed, therefore, it still needs some optimization. The idea is to resample the trials using a signal resampling function instead of adding frames at the beginning of the trials. This means that only the data from the shot is part of the trials, instead of having some undesired signal with the shot (method 1 & 2). Also, an estimate was made to obtain the resampling number of 400 frames, so a deeper analysis is required to find the ideal resampling rate. It also uses the biomechanics sensor configuration. 
 
 ## 3 - CNN Method 1
-
+I'm just staring to test different models' architechture. The first CNN was to compare the result with the other 2 preprocessing method. The goal is to keep on building with Chollet's method.
 ## 4 - CNN Method 2
-
+Only Gab's model has been tested for comparison with other preproccesing method.
 ## 5 - CNN Method 3
+Same as method 2
