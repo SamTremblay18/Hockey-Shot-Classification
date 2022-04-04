@@ -55,8 +55,6 @@ This notebook is dedicated to all the preprocessing steps required before feedin
 - Method 1: reframe to 576 and all sensors configuration
   - This approach was the first discussed and the most simple to manipulate the data. The 576 frames was determined by finding the slowest (most frames) shooting/pass trial and used as a reference. All shooting/pass trials under 576 frames were then added frames from the pre-shot, so that all trials were of 576 frames. The assumption was that the small addition of pre-shot (skating and stick-handling before the shot) was going to be negligible and would not negatively affect the model's accuracy while keeping 100% of the data.
   - After opening the data and the markers, a function (Preprocess_1) was created to run all the preprocessing step and it was stored into the P_processed1 dictionary.
-  - The rest of this method is not optimized as there is a lot of manipulation done by hand, but it was created early in my process of learning python. It is fairly simple as I'm doing the final manipulations (split, shuffling, swap axes) on the tensors to have the required shape.
-  - Lastly, it was saved as a pickle file for future CNN input
 
 - Method 2: reframe to 576 and biomechanics sensor configuration (BSC)
   - This approach is the same as the first one with only one exception, it used the BSC. This approach was only selecting the sensors from both hands, both feet and the pelvis, as suggested in the literature (Jang et al., 2018). 
@@ -65,8 +63,9 @@ This notebook is dedicated to all the preprocessing steps required before feedin
   - This method was recently designed, therefore, it still needs some optimization. The idea is to resample the trials using a signal resampling function instead of adding frames at the beginning of the trials. This means that only the data from the shot is part of the trials, instead of having some undesired signal with the shot (method 1 & 2). Also, an estimate was made to obtain the resampling number of 400 frames, so a deeper analysis is required to find the ideal resampling rate. It also uses the BSC. 
 
 ## 3 - CNN Method 1
-I'm just staring to test different models' architechture. The first CNN was to compare the result with the other 2 preprocessing method. The goal is to keep on building with Chollet's method.
+- I'm just staring to test different models' architechture. The first CNN was to compare the result with the other 2 preprocessing method. The goal is to keep on building with Chollet's method.
+- The last CNN model used was inspired by hfawaz https://keras.io/examples/timeseries/timeseries_classification_from_scratch/ 
 ## 4 - CNN Method 2
-Only Gab's model has been tested for comparison with other preproccesing method.
+- Gab's model and hfawaz's model were implemented
 ## 5 - CNN Method 3
-Same as method 2
+- Same as method 2
