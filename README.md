@@ -9,8 +9,7 @@ This project has been divided into multiple notebooks:
 - Participants_dictionary.ipynb
 - Preprocessing.ipynb
 - CNN_Method1.ipynb (Reframe to 576, all sensors configuration)
-- CNN_Method2.ipynb (Reframe to 576, biomechanics sensor configuration)
-- CNN_Method3.ipynb (Resampling, biomechanics sensor configuration)
+- CNN_Method5.ipynb (Reframe to 576, hands sensor configuration)
 
 ## 1 - Participants' dictionary
 This notebook is very simple and is not optimized by any means. It has been created before I had better knowledge of python and I did not spent more time on it since it takes approximately 5 hours to open all the excel sheets. (Will be updated in the future)
@@ -37,7 +36,7 @@ This notebook is very simple and is not optimized by any means. It has been crea
 
 
 ## 2 - Preprocessing
-This notebook is dedicated to all the preprocessing steps required before feeding the data in a CNN model. There are 3 different preprocessing method used, more explanation at their own section and the technical details are commented directly in the notebook.
+This notebook is dedicated to all the preprocessing steps required before feeding the data in a CNN model. There are 2 different preprocessing method used, more explanation at their own section and the technical details are commented directly in the notebook.
 
 - It is important to note that the objective of this preprocessing stage is to create tensors of shape [trials, frames, channels] to be a proper input for the CNNs. Each participant tensor is comprised of:
    - 10 backhand shots (labeled BH, encoded as 0)
@@ -56,16 +55,13 @@ This notebook is dedicated to all the preprocessing steps required before feedin
   - This approach was the first discussed and the most simple to manipulate the data. The 576 frames was determined by finding the slowest (most frames) shooting/pass trial and used as a reference. All shooting/pass trials under 576 frames were then added frames from the pre-shot, so that all trials were of 576 frames. The assumption was that the small addition of pre-shot (skating and stick-handling before the shot) was going to be negligible and would not negatively affect the model's accuracy while keeping 100% of the data.
   - After opening the data and the markers, a function (Preprocess_1) was created to run all the preprocessing step and it was stored into the P_processed1 dictionary.
 
-- Method 2: reframe to 576 and biomechanics sensor configuration (BSC)
-  - This approach is the same as the first one with only one exception, it used the BSC. This approach was only selecting the sensors from both hands, both feet and the pelvis, as suggested in the literature (Jang et al., 2018). 
- 
-- Method 3: resampling and BSC
-  - This method was recently designed, therefore, it still needs some optimization. The idea is to resample the trials using a signal resampling function instead of adding frames at the beginning of the trials. This means that only the data from the shot is part of the trials, instead of having some undesired signal with the shot (method 1 & 2). Also, an estimate was made to obtain the resampling number of 400 frames, so a deeper analysis is required to find the ideal resampling rate. It also uses the BSC. 
+- Method 2: reframe to 576 and hands sensor configuration (BSC)
+  - This approach is the same as the first one with only one exception, it used only the two hand's sensor.
+  
 
 ## 3 - CNN Method 1
 - I'm just staring to test different models' architechture. The first CNN was to compare the result with the other 2 preprocessing method. The goal is to keep on building with Chollet's method.
 - The last CNN model used was inspired by hfawaz https://keras.io/examples/timeseries/timeseries_classification_from_scratch/ 
 ## 4 - CNN Method 2
-- Gab's model and hfawaz's model were implemented
-## 5 - CNN Method 3
-- Same as method 2
+
+
