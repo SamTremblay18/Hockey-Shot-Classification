@@ -61,7 +61,7 @@ This notebook is dedicated to all the preprocessing steps required before feedin
 
 ## 3 - FCN for both sensor configuration
 - The FCN model used was inspired by hfawaz https://keras.io/examples/timeseries/timeseries_classification_from_scratch/ and originally designed by Wang et al., (2016) in https://arxiv.org/abs/1611.06455
-- The hyperparameters were found via random search using KerasTuner https://keras.io/keras_tuner/
-
+- The hyperparameters were found for both sensor configurations via random search using KerasTuner https://keras.io/keras_tuner/
+- Results can be found at the end of each sensor configurations' notebook
 
 
