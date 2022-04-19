@@ -8,11 +8,11 @@ In order to properly understand this project, open the following notebooks to fo
 This project has been divided into multiple notebooks:
 - Participants_dictionary.ipynb
 - Preprocessing.ipynb
-- CNN_Method1.ipynb (Reframe to 576, all sensors configuration)
-- CNN_Method5.ipynb (Reframe to 576, hands sensor configuration)
+- CNN_Method1_ALL.ipynb (Reframe to 576, all sensors configuration)
+- CNN_Method2_HANDS.ipynb (Reframe to 576, hands sensor configuration)
 
 ## 1 - Participants' dictionary
-This notebook is very simple and is not optimized by any means. It has been created before I had better knowledge of python and I did not spent more time on it since it takes approximately 5 hours to open all the excel sheets. (Will be updated in the future)
+This notebook is very simple and is not optimized by any means. It has been created before I had better knowledge of python and I did not spent more time on it since it takes approximately 5 hours to open all the excel sheets.
 
 - Functions
   - The first function loads a participant's excel file containing the sensor free acceleration sheet and the markers (label) sheet.
@@ -52,16 +52,16 @@ This notebook is dedicated to all the preprocessing steps required before feedin
   - You will find the technical details about the functions commented directly in the notebook.
 
 - Method 1: reframe to 576 and all sensors configuration
-  - This approach was the first discussed and the most simple to manipulate the data. The 576 frames was determined by finding the slowest (most frames) shooting/pass trial and used as a reference. All shooting/pass trials under 576 frames were then added frames from the pre-shot, so that all trials were of 576 frames. The assumption was that the small addition of pre-shot (skating and stick-handling before the shot) was going to be negligible and would not negatively affect the model's accuracy while keeping 100% of the data.
+  - This approach was the first discussed and the most simple to manipulate the data. The 576 frames was determined by finding the slowest (most frames) shooting/pass trial and used as a reference. All shooting/pass trials under 576 frames were then added frames from the pre-shot, so that all trials were of 576 frames. The assumption was that the small addition of pre-shot (skating and stick-handling before the shot) was going to be negligible and would not negatively affect the model's accuracy while keeping 100% of the shooting/passing data.
   - After opening the data and the markers, a function (Preprocess_1) was created to run all the preprocessing step and it was stored into the P_processed1 dictionary.
 
 - Method 2: reframe to 576 and hands sensor configuration (BSC)
   - This approach is the same as the first one with only one exception, it used only the two hand's sensor.
   
 
-## 3 - CNN Method 1
-- I'm just staring to test different models' architechture. The first CNN was to compare the result with the other 2 preprocessing method. The goal is to keep on building with Chollet's method.
-- The last CNN model used was inspired by hfawaz https://keras.io/examples/timeseries/timeseries_classification_from_scratch/ 
-## 4 - CNN Method 2
+## 3 - FCN for both sensor configuration
+- The FCN model used was inspired by hfawaz https://keras.io/examples/timeseries/timeseries_classification_from_scratch/ and originally designed by Wang et al., (2016) in https://arxiv.org/abs/1611.06455
+- The hyperparameters were found via random search using KerasTuner https://keras.io/keras_tuner/
+
 
 
