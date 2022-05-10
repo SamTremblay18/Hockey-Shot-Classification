@@ -1,7 +1,5 @@
 # Introduction
 
-
-
 Google Collab Pro+ was used for this project.
 
 In order to properly understand this project, open the following notebooks to follow along with the content of this ReadMe. 
@@ -14,7 +12,7 @@ This project has been divided into multiple notebooks:
 
 # Sensor configuration
 
-- Xsens MVN IMU system 17-sensor configuration
+- Xsens MVN Link IMU system 17-sensor configuration (https://www.xsens.com/products/mvn-analyze?hsCtaTracking=317368b0-35fa-4dce-b410-de40b523565c%7Ce9ec2617-ba66-47d2-8dc3-c4d5de12a4cd)
 <img width="527" alt="Screen Shot 2022-05-10 at 2 02 27 PM" src="https://user-images.githubusercontent.com/83588457/167693279-4c3af637-6c41-495a-875e-3e38178cfe03.png">
 
 # Trials
@@ -80,11 +78,11 @@ This notebook is dedicated to all the preprocessing steps required before feedin
 - Functions
   - You will find the technical details about the functions commented directly in the notebook.
 
-- Method 1: reframe to 576 and all sensors configuration
+- Method 1: reframe to 576 and all sensors configuration (ASC)
   - This approach was the first discussed and the most simple to manipulate the data. The 576 frames was determined by finding the slowest (most frames) shooting/pass trial and used as a reference. All shooting/pass trials under 576 frames were then added frames from the pre-shot, so that all trials were of 576 frames. The assumption was that the small addition of pre-shot (skating and stick-handling before the shot) was going to be negligible and would not negatively affect the model's accuracy while keeping 100% of the shooting/passing data.
   - After opening the data and the markers, a function (Preprocess_1) was created to run all the preprocessing step and it was stored into the P_processed1 dictionary.
 
-- Method 2: reframe to 576 and hands sensor configuration (BSC)
+- Method 2: reframe to 576 and hands sensor configuration (HSC)
   - This approach is the same as the first one with only one exception, it used only the two hand's sensor.
   
 
