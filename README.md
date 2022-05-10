@@ -1,7 +1,8 @@
-# Hockey Shot Classification
-Google Collab Pro+ was used for this project.
+# Introduction
 
-To run this code, you will need to gain access to the Google drive containing all the data and the following notebooks.
+
+
+Google Collab Pro+ was used for this project.
 
 In order to properly understand this project, open the following notebooks to follow along with the content of this ReadMe. 
 
@@ -10,6 +11,33 @@ This project has been divided into multiple notebooks:
 - Preprocessing.ipynb
 - CNN_Method1_ALL.ipynb (Reframe to 576, all sensors configuration)
 - CNN_Method2_HANDS.ipynb (Reframe to 576, hands sensor configuration)
+
+# Sensor configuration
+
+- Xsens MVN IMU system 17-sensor configuration
+<img width="527" alt="Screen Shot 2022-05-10 at 2 02 27 PM" src="https://user-images.githubusercontent.com/83588457/167693279-4c3af637-6c41-495a-875e-3e38178cfe03.png">
+
+# Trials
+- 15 slap shots (5/direction)
+- 15 wrist shots (5/direction)
+<img width="507" alt="Screen Shot 2022-05-10 at 1 47 37 PM" src="https://user-images.githubusercontent.com/83588457/167690744-6846f6d2-ec58-4d8f-a144-21bda9ce6934.png">
+
+- 10 backhand shots
+<img width="498" alt="Screen Shot 2022-05-10 at 1 49 41 PM" src="https://user-images.githubusercontent.com/83588457/167691042-0becabb6-a61a-46a3-82ab-9f302488d015.png">
+
+- 10 one-timers
+<img width="565" alt="Screen Shot 2022-05-10 at 1 49 06 PM" src="https://user-images.githubusercontent.com/83588457/167690960-3067fc31-b1ee-4f9d-a467-1e319cc334fe.png">
+
+- 5 passes
+<img width="572" alt="Screen Shot 2022-05-10 at 1 50 06 PM" src="https://user-images.githubusercontent.com/83588457/167691116-16e09872-f41d-4b3b-9df5-ee9b4b9efd61.png">
+
+- 5 stickhandling trials
+<img width="525" alt="Screen Shot 2022-05-10 at 1 50 47 PM" src="https://user-images.githubusercontent.com/83588457/167691239-3dae82b4-176f-4779-b062-4388685bdf80.png">
+
+- 5 minutes of rest on the bench
+
+# Summary
+<img width="419" alt="Screen Shot 2022-05-10 at 2 00 59 PM" src="https://user-images.githubusercontent.com/83588457/167693045-d3bb23c4-596f-44d2-a53c-2a588d40af81.png">
 
 ## 1 - Participants' dictionary
 This notebook is very simple and is not optimized by any means. It has been created before I had better knowledge of python and I did not spent more time on it since it takes approximately 5 hours to open all the excel sheets.
