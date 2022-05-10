@@ -26,7 +26,8 @@ This notebook is very simple and is not optimized by any means. It has been crea
 
 - To get a better view of the datasets, here's an example of Participant 1's sensor free acceleration data in the participants dictionnary:
   - The first column is the frame at which data has been collected (240 Hz = 240 frames per second). The next 51 columns are the free sensor acceleration data for the 17 Xsens sensors, in the X,Y and Z-axis (17 x 3 = 51). The last column represent the label of the task being performed at the specific frame.
-<img width="1383" alt="Screen Shot 2022-03-29 at 1 38 36 PM" src="https://user-images.githubusercontent.com/83588457/160672310-83af7b7a-63aa-435f-a150-ae389726fdca.png">
+
+<img width="1357" alt="Screen Shot 2022-05-10 at 1 40 17 PM" src="https://user-images.githubusercontent.com/83588457/167689694-7efe97b7-89d1-4004-bda1-b8368bbf6785.png">
 
 
 - To help manipulate these enormous datasets, a markers' dictionary has been created with more information about each task being performed for a specific participant: 
