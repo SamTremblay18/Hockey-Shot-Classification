@@ -7,8 +7,8 @@ In order to properly understand this project, open the following notebooks to fo
 This project has been divided into multiple notebooks:
 - Participants_dictionary.ipynb
 - Preprocessing.ipynb
-- CNN_Method1_ALL.ipynb (Reframe to 576, all sensors configuration)
-- CNN_Method2_HANDS.ipynb (Reframe to 576, hands sensor configuration)
+- CNN_Method1_ALL_Final.ipynb (Reframe to 576, all sensors configuration)
+- CNN_Method2_HANDS_Final.ipynb (Reframe to 576, hands sensor configuration)
 
 # Sensor configuration
 
@@ -51,7 +51,7 @@ This notebook is very simple and is not optimized by any means. It has been crea
   - Again, manually opening the participants from pickle and then creating their own dictionary for easier in the future.
 
 - To get a better view of the datasets, here's an example of Participant 1's sensor free acceleration data in the participants dictionnary:
-  - The first column is the frame at which data has been collected (240 Hz = 240 frames per second). The next 51 columns are the free sensor acceleration data for the 17 Xsens sensors, in the X,Y and Z-axis (17 x 3 = 51). The last column represent the label of the task being performed at the specific frame.
+  - The first column is the frame at which data has been collected (240 Hz = 240 frames per second). The next 51 columns are the acceleration data for the 17 Xsens sensors, in the X,Y and Z-axis (17 x 3 = 51). The last column represent the label of the task being performed at the specific frame.
 
 <img width="1357" alt="Screen Shot 2022-05-10 at 1 40 17 PM" src="https://user-images.githubusercontent.com/83588457/167689694-7efe97b7-89d1-4004-bda1-b8368bbf6785.png">
 
